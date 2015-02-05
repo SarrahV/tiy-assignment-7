@@ -8,7 +8,6 @@
 // --- use the reduce function to add together all the items
 // --- divide this number by the total number of prices
 
-var theAnswer = 0;
 
 //this part maps the price, grabbing all the values
 var getPrice = items.map(function(costValue){
@@ -18,3 +17,25 @@ var getPrice = items.map(function(costValue){
 var sumPrice = getPrice.reduce(function(total, item){
   return  total + item;
 });
+
+var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
+
+
+
+// ----------Show me how to get an array of items that cost between $14.00 and $18.00 USD
+
+/*"Items that cost between $14.00 USD and $18.00 USD:"
+[
+{
+  title: "1970s Coors Banquet Glass Beer Pitcher",
+  ...
+},
+{
+  title: "The Three Broomsticks Customizable Beer Stein Mug, Harry Potter Inspired, hogsmeade village, harry potter gift, three broomsticks mug",
+  ...
+},
+{
+  title: "Hand Painted Colorful Feather Glass",
+  ...
+}
+]

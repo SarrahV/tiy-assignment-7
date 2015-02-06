@@ -52,7 +52,24 @@ var cheap = items.filter(function(stuff){
 });
 
 
+/* Show me how find the item with a "GBP" currency code and print its name and price. 
+Please console.log the one you find.
 
+1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
+
+*/
+
+
+
+var getItem = items.filter(function(product){
+  return product.currency_code === "GBP";
+});
+
+var theAnswer = getItem[0].title + " £" + getItem[0].price;
+
+
+/* Show me how to find which items are made of wood. 
+Please console.log the ones you find. */
 
 
 

@@ -40,38 +40,20 @@ var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
 }
 ]
 
-// --- final output needs to be items with details, not just the price! - Grab all keys
-// --- filter for title and price
+
 // --- sort them by items with a price greater than/equal to  $14.00 and less than/equal to $18.00 USD
 // --- return this in an array beginning with a string that states : Items that cost between $14.00 USD and $18.00 USD:
 */
 
 
 
-//for each to call all the items into an array????
-
-
-var getItems = items.map(function(allItems){
-  return allItems.price;
-}, []);
-
-
-//returns array of objects keys in order given
-var keys = items.keys(items);
-
-for (var i = 0; i < keys.length; i++) {
-    var val = items[keys[i]];
-}
+var cheap = items.filter(function(stuff){
+  return stuff.price >= 14 && stuff.price <= 18;
+});
 
 
 
 
-
-
-
-/*var sort = getItems.filter(function(specItems){
-  return specItems <=
-})*/
 
 
 

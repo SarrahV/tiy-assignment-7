@@ -71,6 +71,32 @@ var theAnswer = getItem[0].title + " £" + getItem[0].price;
 /* Show me how to find which items are made of wood. 
 Please console.log the ones you find. */
 
+// "materials" contains the wood designation for a product
+// console log the titles
+// must add "is made of wood" at the end of te sentence
+
+
+
+var someThing = items.map(function(item){
+  return item.materials;
+});
+
+var myArray = someThing;
+
+var containsWood = function(myArray) {
+  var theAnswer = false;
+  myArray.forEach(function(currentMaterial){
+      if (currentMaterial === "wood") {
+        theAnswer = true;
+      }
+  })
+  return theAnswer;
+};
+
+
+
+
+
 
 
 

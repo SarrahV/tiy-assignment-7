@@ -77,24 +77,6 @@ Please console.log the ones you find. */
 
 
 
-var someThing = items.map(function(item){
-  return item.materials;
-});
-
-var myList = someThing;
-
-var containsWood = function(myArray) {
-  var anAnswer = false;
-  myArray.forEach(function(currentMaterial){
-      if (currentMaterial === "wood") {
-        theAnswer = true;
-      }
-  })
-  return anAnswer;
-}; 
-
-
-///--------
 
 
 
@@ -144,10 +126,24 @@ function titlesWithWood {
 
 /// Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
 
+// first need to access the items materials lists
+// second need to determine which items have greater than 8 materials (materials.length > 8 index spots?)
+// final output needs to be item title and the list of materials
 
 
 
+/// This will call all of them with title and materials list
+var getMaterials = items.map(function(ingredients){
+  return ingredients.title + ingredients.materials;
+});
 
+
+var whatLength = getMaterials.length > 8;
+
+
+var help = items.filter(function(stuff){
+  return stuff.materials > 8;
+});
 
 
 

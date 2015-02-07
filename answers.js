@@ -81,19 +81,68 @@ var someThing = items.map(function(item){
   return item.materials;
 });
 
-var myArray = someThing;
+var myList = someThing;
 
 var containsWood = function(myArray) {
-  var theAnswer = false;
+  var anAnswer = false;
   myArray.forEach(function(currentMaterial){
       if (currentMaterial === "wood") {
         theAnswer = true;
       }
   })
-  return theAnswer;
-};
+  return anAnswer;
+}; 
 
 
+///--------
+
+
+
+
+
+//returns false because items does not have wood, materials does
+var containsWood = function(items) {
+  
+  var anAnswer = false;
+  
+  items.forEach(function(material){
+      if (material === "wood") {
+        anAnswer = true;
+      }
+  });
+  
+  return anAnswer;
+}
+
+
+//testing
+
+
+var containsWood = function(items) {
+  
+  var anAnswer = false;
+  
+  items.forEach(function(material){
+      if (material === "wood") {
+        anAnswer = true;
+      }
+  });
+  
+  return anAnswer;
+}
+
+
+
+function titlesWithWood {
+  var itemsWithWood = items.filter(function(currentItem) {
+    var currentMaterials = currentItem.materials;
+    var containsWood = hasWood(currentMaterials);
+  return containswood;
+  });
+}
+
+
+/// Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
 
 
 

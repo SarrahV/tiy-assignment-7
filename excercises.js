@@ -11,7 +11,7 @@ function max(){
 }
 
 // ---------------------
-// Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
+// Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them. (Accept three param and return the largest)
 // ---------------------
 
 function maxOfThree(){
@@ -65,6 +65,33 @@ function filterLongWords(words, i){
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
+///   have a string, we want to see a frequency listing
+///   we want to transform it from  a string object into an array object "str".split(" ")
+
+str;
+
+[convert to array of chars]
+[chars]
+[empty map object - maps chars to frequency]
+[loop over chars]
+  [get current char]
+  [does map object have property for the current char]
+    [true]
+      [increment that property]
+    [false]
+      [add that property]
+      [give it the value of 1]
+
+      ends with the answer
+
+     {
+      "a" :7,
+      "b" :2,
+    } 
+
+
+
+
 
 function charFreq(string){
     //...

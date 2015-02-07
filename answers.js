@@ -77,18 +77,27 @@ Please console.log the ones you find. */
 
 
 
-
-
-
-
-
 //returns false because items does not have wood, materials does
-var containsWood = function(items) {
+
+
+var stepOne = items.filter (function(item){
+  return item;
+});
+
+
+var getMat = stepOne.map(function(item){
+  return item.materials;
+});
+
+
+
+
+var containsWood = function(myArray) {
   
   var anAnswer = false;
   
-  items.forEach(function(material){
-      if (material === "wood") {
+  myArray.forEach(function(itemInArray){
+      if (itemInArray === "wood") {
         anAnswer = true;
       }
   });
@@ -97,15 +106,16 @@ var containsWood = function(items) {
 }
 
 
-//testing
+/* Ignore the rest of this crap for now
 
 
 var containsWood = function(items) {
   
   var anAnswer = false;
-  
-  items.forEach(function(material){
-      if (material === "wood") {
+  console.log(items);
+
+  items.forEach(function(materials){
+      if (materials === "wood") {
         anAnswer = true;
       }
   });
@@ -121,7 +131,7 @@ function titlesWithWood {
     var containsWood = hasWood(currentMaterials);
   return containswood;
   });
-}
+} */
 
 
 /// Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
@@ -132,22 +142,32 @@ function titlesWithWood {
 
 
 
+
+
 /// This will call all of them with title and materials list
 var getMaterials = items.map(function(ingredients){
   return ingredients.title + ingredients.materials;
 });
 
 
-var whatLength = getMaterials.length > 8;
-
-
-var help = items.filter(function(stuff){
-  return stuff.materials > 8;
+var whatLength = items.filter(function(materials){
+  return materials.length > 8;
 });
 
 
 
+// ANSWERED
+// Show me how to calculate how many items were made by their sellers - 18 were made by their sellers
+// "who_made" is the key property value
 
 
+var manf = items.map(function(madeBy) {
+  return madeBy.who_made === "i_did";
+  });
 
+ var sum = manf.reduce(function(item, value) {
+  return item + value;
+ });
+
+var answer = sum + " were made by their sellers";
 

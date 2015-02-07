@@ -1,3 +1,4 @@
+// ANSWERED
 // ---------Show me how to calculate the average price of all items. Please console.log the average.
 
 // ---------The average price is $23.63
@@ -21,7 +22,7 @@ var sumPrice = getPrice.reduce(function(total, item){
 var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
 
 
-
+// ANSWERED
 // ----------Show me how to get an array of items that cost between $14.00 and $18.00 USD
 
 /*"Items that cost between $14.00 USD and $18.00 USD:"
@@ -40,7 +41,7 @@ var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
 }
 ]
 
-
+// ANSWERED
 // --- sort them by items with a price greater than/equal to  $14.00 and less than/equal to $18.00 USD
 // --- return this in an array beginning with a string that states : Items that cost between $14.00 USD and $18.00 USD:
 */
@@ -52,6 +53,8 @@ var cheap = items.filter(function(stuff){
 });
 
 
+
+// ANSWERED
 /* Show me how find the item with a "GBP" currency code and print its name and price. 
 Please console.log the one you find.
 
@@ -68,12 +71,14 @@ var getItem = items.filter(function(product){
 var theAnswer = getItem[0].title + " £" + getItem[0].price;
 
 
+// NOT ANSWERED!!!!!!!!!!
+
 /* Show me how to find which items are made of wood. 
 Please console.log the ones you find. */
 
 // "materials" contains the wood designation for a product
 // console log the titles
-// must add "is made of wood" at the end of te sentence
+// must add "is made of wood" at the end of the sentence
 
 
 
@@ -134,6 +139,7 @@ function titlesWithWood {
 } */
 
 
+// ANSWERED
 /// Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
 
 // first need to access the items materials lists
@@ -141,18 +147,19 @@ function titlesWithWood {
 // final output needs to be item title and the list of materials
 
 
-
-
-
 /// This will call all of them with title and materials list
-var getMaterials = items.map(function(ingredients){
-  return ingredients.title + ingredients.materials;
+
+var stepOne = items.filter(function(item){
+  return item;
 });
 
-
-var whatLength = items.filter(function(materials){
-  return materials.length > 8;
+var getMat = stepOne.map(function(item){
+  return [item.title, item.materials.length];
 });
+
+var thisAnswer = getMat.filter(function(item, index){
+  return item[1] >= 8;
+})
 
 
 

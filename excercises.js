@@ -162,7 +162,7 @@ function findLongestWord(words) {
 };
 
 
-// AlMOST ANSWERED
+//ANSWERED
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
@@ -171,7 +171,7 @@ function findLongestWord(words) {
 // if the word is longer than the number, return it
 
 
-/// running this results in it only comparing my number to the first word in my array...what?!
+/*  running this results in it only comparing my number to the first word in my array...why?
 
 function filterLongWords(words, i){
 
@@ -197,6 +197,21 @@ function filterLongWords(words, i){
 
 
 ex. filterLongWords(["this", "is", "tough"], 4)
+*/
+
+
+
+function filterLongWords(words, int) {
+ var length = words.length;
+ var theLongest = [];
+
+ for (index = 0; index < length; index++) {
+    if (words[index].length > int) {
+      theLongest[theLongest.length] = words[index];
+   }
+ }
+ return theLongest;
+}
 
 
 // ANSWERED

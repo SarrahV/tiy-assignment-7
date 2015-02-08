@@ -1,31 +1,68 @@
 /**
  *
  */
-
+// ANSWERED
 // ---------------------
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // ---------------------
 // - Someone can go into console, input two numbers max(9, 8), and will get the largest back
 // - if/ then/ else
-function max(){
-    //...
+
+function max(numb1, numb2){
+  
+  if (numb1 > numb2) {
+    return numb1;
+
+  } else if (numb2 > numb1) {
+    return numb2;
+
+  } else {
+    return "They Are The Same";
+  }
 }
 
+
+// ANSWERED
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them. (Accept three param and return the largest)
 // ---------------------
+// - Someone can go into console, input three numbers max(9, 8, 6), and will get the largest back
+// - if/ then/ else
 
-function maxOfThree(){
-    //...
+
+function maxOfThree(numb1, numb2, numb3){
+     if (numb1 > numb2 && numb1 > numb3) {
+    return numb1;
+
+  } else if (numb2 > numb1 && numb2 > numb3) {
+    return numb2;
+
+  } else if (numb3 > numb1 && numb3 > numb2) {
+    return numb3;    
+
+  } else {
+    return "They Are All The Same";
+  }
 }
 
+// WHAT THE HECK IS CHAR???
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
+// need to give it something to compare to - an array of vowels
+//
+var vowels = "aeiou".split("");
 
-function isVowel(char){
-    //...
-}
+hasVowel = false;
+
+vowels.forEach(function(currentVowel) {
+  if (char === currentVowel) {
+    hasVowel = true;
+  }
+  return hasVowel;
+});
+
+
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.

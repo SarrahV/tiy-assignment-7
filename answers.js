@@ -40,8 +40,6 @@ var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
   ...
 }
 ]
-
-// ANSWERED
 // --- sort them by items with a price greater than/equal to  $14.00 and less than/equal to $18.00 USD
 // --- return this in an array beginning with a string that states : Items that cost between $14.00 USD and $18.00 USD:
 */
@@ -63,7 +61,6 @@ Please console.log the one you find.
 */
 
 
-
 var getItem = items.filter(function(product){
   return product.currency_code === "GBP";
 });
@@ -83,7 +80,6 @@ Please console.log the ones you find. */
 
 
 //returns false because items does not have wood, materials does
-
 
 
 var hasWood = function(items) {

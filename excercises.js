@@ -13,12 +13,12 @@ function max(numb1, numb2){
   if (numb1 > numb2) {
     return numb1;
 
-  } else if (numb2 > numb1) {
-    return numb2;
+    } else if (numb2 > numb1) {
+      return numb2;
 
-  } else {
-    return "They Are The Same";
-  }
+    } else {
+      return "They Are The Same";
+    }
 }
 
 
@@ -34,15 +34,15 @@ function maxOfThree(numb1, numb2, numb3){
      if (numb1 > numb2 && numb1 > numb3) {
     return numb1;
 
-  } else if (numb2 > numb1 && numb2 > numb3) {
-    return numb2;
+    } else if (numb2 > numb1 && numb2 > numb3) {
+      return numb2;
 
-  } else if (numb3 > numb1 && numb3 > numb2) {
-    return numb3;    
+    } else if (numb3 > numb1 && numb3 > numb2) {
+      return numb3;    
 
-  } else {
-    return "They Are All The Same";
-  }
+    } else {
+      return "They Are All The Same";
+    }
 }
 
 // ANSWERED
@@ -103,11 +103,11 @@ function sumAll(myArray) {
   var index;
 
   for (index = 0; index < myArray.length; index++) {
-    
-    sum += myArray[index];
-  }
-  return sum;
-};
+      
+      sum += myArray[index];
+    }
+    return sum;
+  };
 
 ex. sumAll([1,2,3,4]) = 10
 
@@ -120,9 +120,9 @@ function multAll(myArray) {
 
   for (index = 0; index < myArray.length; index++) {
     
-    mult *= myArray[index];
-  }
-  return mult;
+      mult *= myArray[index];
+    }
+      return mult;
 };
 
 ex. multAll([3,5]) = 15
@@ -140,53 +140,86 @@ function reverse(str){
 }
 
 
+// ANSWERED
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
-function findLongestWord(words){
-    //...
-}
 
+function findLongestWord(words) {
+
+  var myLgth = 0;
+  var theLongest;
+
+  for(var i=0; i < words.length; i++){
+      
+      if(words[i].length > myLgth){   /////if the word is greater than 0
+      var myLgth = words[i].length;   
+      theLongest = words[i];
+      } 
+  }
+  return (theLongest);     
+};
+
+
+// AlMOST ANSWERED
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
+// find the longest word first
+// then compare that word to the number
+// if the word is longer than the number, return it
+
+
+/// running this results in it only comparing my number to the first word in my array...what?!
 
 function filterLongWords(words, i){
-    //...
-}
 
+  var myLgth = 0;
+  var theLongest;
+
+  for(var index=0; index < words.length; index++){
+      
+      if(words[index].length > myLgth){   
+      var myLgth = words[index].length;   
+      theLongest = words[index];
+      } 
+
+      if(i < theLongest.length === true){   
+      return (theLongest); 
+      }  
+
+      else {
+      return "The number is greater";
+    }
+  }    
+};
+
+
+ex. filterLongWords(["this", "is", "tough"], 4)
+
+
+// ANSWERED
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 ///   have a string, we want to see a frequency listing
 ///   we want to transform it from  a string object into an array object "str".split(" ")
 
-str;
-
-[convert to array of chars]
-[chars]
-[empty map object - maps chars to frequency]
-[loop over chars]
-  [get current char]
-  [does map object have property for the current char]
-    [true]
-      [increment that property]
-    [false]
-      [add that property]
-      [give it the value of 1]
-
-      ends with the answer
-
-     {
-      "a" :7,
-      "b" :2,
-    } 
-
-
-
 
 
 function charFreq(string){
-    //...
-}
+    var frequency = {};
+    for (var index=0; index<string.length; index++) {
+        var letter = string.letterAt(index);
+    if (frequency[letter]) {
+           frequency[letter]++;
+        } else {
+           frequency[letter] = 1;
+        }
+    }
+
+    return frequency;
+};
+
+ex. charFreq("abbabcbdbabdbdbabababcbcbab")

@@ -45,44 +45,100 @@ function maxOfThree(numb1, numb2, numb3){
   }
 }
 
-// WHAT THE HECK IS CHAR???
+// ANSWERED
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
-// need to give it something to compare to - an array of vowels
-//
-var vowels = "aeiou".split("");
+/* need to give it something to compare to - an array of vowels
+                  
+                  var vowels = "aeiou".split("");
 
-hasVowel = false;
+                  hasVowel = false;
 
-vowels.forEach(function(currentVowel) {
-  if (char === currentVowel) {
-    hasVowel = true;
+                  vowels.forEach(function(currentVowel) {
+                    if (char === currentVowel) {
+                      hasVowel = true;
+                    }
+                    return hasVowel;
+                  });   
+
+                  /*   WHAT THE HECK IS CHAR???  Returns char undefined, I know char needs to be the value I type, 
+                  but I don't know how to get it in here.
+
+Use a switch statement instead - this seems like an easier route when you are only looking for
+a small number of matches */
+
+function isVowel(myChar) {
+
+  switch(myChar) {
+      case "a":
+          return true;
+          break;
+      case "e":
+          return true;
+          break;
+      case "i":
+          return true;
+          break;
+      case "o":
+          return true;
+      case "u":
+          return true;
+          break;
+      default:
+          return "This is not a Vowel";
+          break;
   }
-  return hasVowel;
-});
+};
 
-
-
+// ANSWERED
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(){
-    //...
-}
 
-function multiply(){
-    //...
-}
+function sumAll(myArray) {
 
+  var sum = 0;
+  var index;
+
+  for (index = 0; index < myArray.length; index++) {
+    
+    sum += myArray[index];
+  }
+  return sum;
+};
+
+ex. sumAll([1,2,3,4]) = 10
+
+
+
+function multAll(myArray) {
+
+  var mult = 1; //this would not work with 0 so I tried 1. Why is it 1 !?
+  var index;
+
+  for (index = 0; index < myArray.length; index++) {
+    
+    mult *= myArray[index];
+  }
+  return mult;
+};
+
+ex. multAll([3,5]) = 15
+
+
+
+// ANSWERED
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
-    //...
+
+function reverse(str){
+    return str.split("").reverse().join("");
 }
+
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.

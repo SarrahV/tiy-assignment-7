@@ -85,58 +85,37 @@ Please console.log the ones you find. */
 //returns false because items does not have wood, materials does
 
 
-var stepOne = items.filter (function(item){
-  return item;
-});
 
-
-var getMat = stepOne.map(function(item){
-  return item.materials;
-});
-
-
-
-
-var containsWood = function(myArray) {
+var hasWood = function(items) {
   
-  var anAnswer = false;
+  var containsWood = false;
   
-  myArray.forEach(function(itemInArray){
-      if (itemInArray === "wood") {
-        anAnswer = true;
+  items.forEach(function(itemInArray) {
+      if (itemInArray === "wood"); {
+        containsWood  = true;
       }
   });
   
-  return anAnswer;
-}
+  return containsWood;
+};
 
+///currently returns true when I run isWood(items)
 
-/* Ignore the rest of this crap for now
-
-
-var containsWood = function(items) {
-  
-  var anAnswer = false;
-  console.log(items);
-
-  items.forEach(function(materials){
-      if (materials === "wood") {
-        anAnswer = true;
-      }
-  });
-  
-  return anAnswer;
-}
-
-
-
-function titlesWithWood {
+function titlesWithWood (){
   var itemsWithWood = items.filter(function(currentItem) {
     var currentMaterials = currentItem.materials;
     var containsWood = hasWood(currentMaterials);
-  return containswood;
+    return containsWood;
   });
-} */
+
+var titles = itemsWithWood.map(function(currentItem){
+  return currentItem.title + " is made of wood";
+});
+
+return titles;
+
+}
+///currently returns EVERYTHING...which is not the answer
 
 
 // ANSWERED

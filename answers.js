@@ -81,8 +81,8 @@ Please console.log the ones you find. */
 
 //returns false because items does not have wood, materials does
 
-var getList = items.filter(function(stuff){
-  return stuff.materials;
+var getList = items.filter(function(item, arr){
+  return item.materials;
 });
 
 

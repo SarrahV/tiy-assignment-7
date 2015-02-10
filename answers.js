@@ -21,6 +21,8 @@ var sumPrice = getPrice.reduce(function(total, item){
 
 var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
 
+console.log(avPrice);
+
 
 // ANSWERED
 // ----------Show me how to get an array of items that cost between $14.00 and $18.00 USD
@@ -50,6 +52,9 @@ var cheap = items.filter(function(stuff){
   return stuff.price >= 14 && stuff.price <= 18;
 });
 
+var answer = "Items that cost between $14.00 USD and $18.00 USD:" + cheap;
+
+console.log(answer);
 
 
 // ANSWERED
@@ -66,6 +71,8 @@ var getItem = items.filter(function(product){
 });
 
 var theAnswer = getItem[0].title + " £" + getItem[0].price;
+
+console.log(answer);
 
 
 // NOT ANSWERED!!!!!!!!!!
@@ -134,8 +141,9 @@ var getMat = stepOne.map(function(item){
 
 var thisAnswer = getMat.filter(function(item, index){
   return item[1] >= 8;
-})
+});
 
+console.log(thisAnswer);
 
 
 // ANSWERED
@@ -152,4 +160,8 @@ var manf = items.map(function(madeBy) {
  });
 
 var answer = sum + " were made by their sellers";
+
+console.log(answer);
+
+
 

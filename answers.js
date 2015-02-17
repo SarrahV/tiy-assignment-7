@@ -84,41 +84,41 @@ Please console.log the ones you find. */
 // console log the titles
 // must add "is made of wood" at the end of the sentence
 
-
-
 //returns false because items does not have wood, materials does
 
 
-var hasWood = function(items) {
-  
-  var containsWood = false;
-  
-  items.forEach(function(itemInArray) {
-      if (itemInArray === "wood"); {
-        containsWood  = true;
+
+var hasWood = function(item) {
+  var mats = item.materials;
+  var answer = false;
+
+  mats.forEach(function(mat) {
+      if (mat === "wood") {
+        answer = true;
       }
-  });
   
-  return containsWood;
+  });
+
+  return answer;
 };
 
-///currently returns true when I run isWood(items)
+var itemsWithWood = items.filter(function(currentItem) {
+                      
+    return hasWood(currentItem);
 
-function titlesWithWood (){
-  var itemsWithWood = items.filter(function(currentItem) {
-    var currentMaterials = currentItem.materials;
-    var containsWood = hasWood(currentMaterials);
-    return containsWood;
-  });
+}); 
 
-var titles = itemsWithWood.map(function(currentItem){
-  return currentItem.title + " is made of wood";
+var titles = itemsWithWood.map(function(stuff) {
+
+  return stuff.title + " is made of wood";
+
 });
 
-return titles;
+console.log(titles);
 
-}
-///currently returns EVERYTHING...which is not the answer
+
+
+
 
 
 // ANSWERED

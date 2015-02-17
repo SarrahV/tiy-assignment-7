@@ -109,7 +109,7 @@ function sumAll(myArray) {
     return sum;
   };
 
-ex. sumAll([1,2,3,4]) = 10
+// ex. sumAll([1,2,3,4]) = 10
 
 
 
@@ -125,7 +125,7 @@ function multAll(myArray) {
       return mult;
 };
 
-ex. multAll([3,5]) = 15
+// ex. multAll([3,5]) = 15
 
 
 
@@ -237,4 +237,4 @@ function charFreq(string){
     return frequency;
 };
 
-ex. charFreq("abbabcbdbabdbdbabababcbcbab")
+// ex. charFreq("abbabcbdbabdbdbabababcbcbab")

@@ -186,7 +186,6 @@ var thisAnswer = getMat.filter(function(item, index){
 
   })
 
-});
 
 console.log(thisAnswer);
 

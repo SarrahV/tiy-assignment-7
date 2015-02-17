@@ -183,7 +183,7 @@ var getMat = stepOne.map(function(item){
 
 var thisAnswer = getMat.filter(function(item, index){
   return item[1] >= 8;
-<<<<<<< HEAD
+
   })
 
 });

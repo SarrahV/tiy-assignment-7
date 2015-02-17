@@ -22,6 +22,9 @@ var sumPrice = getPrice.reduce(function(total, item){
 var avPrice = "The average price is $ " + (sumPrice / 25).toFixed(2);
 
 
+console.log(avPrice);
+
+
 // ANSWERED
 // ----------Show me how to get an array of items that cost between $14.00 and $18.00 USD
 
@@ -51,6 +54,11 @@ var cheap = items.filter(function(stuff){
 });
 
 
+var answer = "Items that cost between $14.00 USD and $18.00 USD:" + cheap;
+
+console.log(answer);
+
+
 
 // ANSWERED
 /* Show me how find the item with a "GBP" currency code and print its name and price. 
@@ -66,6 +74,9 @@ var getItem = items.filter(function(product){
 });
 
 var theAnswer = getItem[0].title + " £" + getItem[0].price;
+
+
+console.log(answer);
 
 
 // NOT ANSWERED!!!!!!!!!!
@@ -115,7 +126,41 @@ var titles = itemsWithWood.map(function(currentItem){
 return titles;
 
 }
+
 ///currently returns EVERYTHING...which is not the answer
+
+//returns false because items does not have wood, materials does
+
+
+
+var hasWood = function(item) {
+  var mats = item.materials;
+  var answer = false;
+
+  mats.forEach(function(mat) {
+      if (mat === "wood") {
+        answer = true;
+      }
+  
+  });
+
+  return answer;
+};
+
+var itemsWithWood = items.filter(function(currentItem) {
+                      
+    return hasWood(currentItem);
+
+}); 
+
+var titles = itemsWithWood.map(function(stuff) {
+
+  return stuff.title + " is made of wood";
+
+});
+
+console.log(titles);
+
 
 
 // ANSWERED
@@ -130,15 +175,20 @@ return titles;
 
 var stepOne = items.filter(function(item){
   return item;
-});
+  });
 
 var getMat = stepOne.map(function(item){
   return [item.title, item.materials.length];
-});
+  });
 
 var thisAnswer = getMat.filter(function(item, index){
   return item[1] >= 8;
-})
+<<<<<<< HEAD
+  })
+
+});
+
+console.log(thisAnswer);
 
 
 
@@ -156,4 +206,8 @@ var manf = items.map(function(madeBy) {
  });
 
 var answer = sum + " were made by their sellers";
+
+console.log(answer);
+
+
 
